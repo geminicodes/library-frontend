@@ -16,6 +16,8 @@ const displayAuthors = (loading, data) =>{
 const AddBook =() =>{
     const [name, setName] = useState('');
     const [genre, setGenre] = useState('');
+    const [language, setLanguage] = useState('');
+    const [status, setStatus] = useState('');
     const [authorId, setAuthorId] = useState('');
     const { loading, data } = useQuery(getAuthorsQuery);
     const [addBookMut] = useMutation(addBookMutation);
@@ -26,6 +28,8 @@ const AddBook =() =>{
             variables: {
                 name: name,
                 genre: genre,
+                language: language,
+                status: status,
                 authorId: authorId,
             },
             refetchQueries: [getBooksQuery]
@@ -41,6 +45,14 @@ const AddBook =() =>{
             <div className="field">
                 <label>Genre:</label>
                 <input type="text" value={genre} onChange={(e) => setGenre(e.target.value)}  />
+            </div>
+            <div className="field">
+                <label>Language:</label>
+                <input type="text" value={language} onChange={(e) => setLanguage(e.target.value)}  />
+            </div>
+            <div className="field">
+                <label>Status:</label>
+                <input type="text" value={status} onChange={(e) => setStatus(e.target.value)}  />
             </div>
             <div className="field">
                 <label>Author:</label>

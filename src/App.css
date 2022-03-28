@@ -83,10 +83,12 @@ form button {
     color: black;
 }
 
-#register-user {
+#add-author button {
+    background: pink ;
+}
+
+#add-author {
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 400px;
-    width: 200px;
+    left: 450px;
+    bottom: 0;
 }
