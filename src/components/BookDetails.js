@@ -9,19 +9,19 @@ const BookDetails = ({ bookId }) => {
 	let display;
 	if (loading) {
 		display = <div>loading</div>;
-	} else {
+    } else {
         const { book } = data;
 		display = (
 			<div>
 				<h2>{book.name}</h2>
-				<p>{book.genre}</p>
-                <p>{book.language}</p>
-                <p>{book.status}</p>
-				<p>{book.author.name}</p>
-				<p>All books by this author:</p>
-				<ul className="other-books">
+                <p>Author: {book.author.name}</p>
+				<p>Genre: {book.genre}</p>
+                <p>Language: {book.language}</p>
+                <p>Status: {book.status}</p>
+				<h3>Other books by this author:</h3>
+				<ul id="other-books">
 					{book.author.books.map((item) => {
-						return <li key={item.id}>{item.name},{item.genre},{item.language},{item.status}</li>;
+						return <li key={item.id}>{item.name} <br/> {item.language},{item.genre} <br/> {item.status}</li>;
 					})}
 				</ul>
 			</div>

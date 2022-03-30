@@ -38,24 +38,25 @@ const AddBook =() =>{
     
     return(
         <form id="add-book" onSubmit={handleSubmit}>
+            <h1>New Book</h1>
             <div className="field">
-                <label>Book name:</label>
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                
+                <input type="text" placeholder="Book name" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
             <div className="field">
-                <label>Genre:</label>
-                <input type="text" value={genre} onChange={(e) => setGenre(e.target.value)}  />
+                
+                <input type="text" placeholder="Genre" value={genre} onChange={(e) => setGenre(e.target.value)}  />
             </div>
             <div className="field">
-                <label>Language:</label>
-                <input type="text" value={language} onChange={(e) => setLanguage(e.target.value)}  />
+                
+                <input type="text" placeholder="Language" value={language} onChange={(e) => setLanguage(e.target.value)}  />
             </div>
             <div className="field">
-                <label>Status:</label>
-                <input type="text" value={status} onChange={(e) => setStatus(e.target.value)}  />
+                
+                <input type="text" placeholder="Status" value={status} onChange={(e) => setStatus(e.target.value)}  />
             </div>
             <div className="field">
-                <label>Author:</label>
+        
                 <select value={authorId} onChange={(e) => setAuthorId(e.target.value)} >
                     <option>Select author</option>
                     { displayAuthors(loading, data) }

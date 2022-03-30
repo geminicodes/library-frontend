@@ -13,11 +13,16 @@ class Home extends Component {
     render() {
       return (
         <ApolloProvider client={client}>
+        <div className="circle1"></div>
+        <div className="circle2"></div>
           <div id="main">
-            <h1>Library</h1>
-            <BookList />
-            <AddBook />
-            <AddAuthor />
+            <div id="main-forms">
+              <AddAuthor />
+              <AddBook />
+            </div>
+            <div id="main-lists">
+              <BookList />
+            </div>
           </div>
         </ApolloProvider>
       );

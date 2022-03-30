@@ -15,6 +15,7 @@ function BookList() {
 	return (
 		<div>
 			<ul id="book-list">
+				<h1>Library</h1>
 				{data.books.map((book) => {
 					return (
 						<li

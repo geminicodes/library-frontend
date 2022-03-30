@@ -20,8 +20,9 @@ const AddAuthor =() =>{
     return(
         <form id="add-author" onSubmit={handleSubmit}>
             <div className="field">
-                <label>Author name:</label>
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                <h1>New Author</h1>
+                
+                <input type="text" placeholder="Author name" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
             <button>+</button>
         </form>
