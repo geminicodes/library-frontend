@@ -15,6 +15,7 @@ const AddAuthor =() =>{
             },
             refetchQueries: [getAuthorsQuery]
         });
+        setName('');
     };
     
     return(
@@ -22,7 +23,7 @@ const AddAuthor =() =>{
             <div className="field">
                 <h1>New Author</h1>
                 
-                <input type="text" placeholder="Author name" value={name} onChange={(e) => setName(e.target.value)} />
+                <input type="text" placeholder="Author Name" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
             <button>+</button>
         </form>

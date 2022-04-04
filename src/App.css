@@ -8,16 +8,17 @@
 body {
     min-height: 100vh;
     color: #333;
-    background: pink;
+    background: linear-gradient(to right top,#fec1ee ,#ff7698,#ffff60,#05f293, #5a78ff, #2800ff);
     /*
     background: linear-gradient(to left bottom, #845ec2,#d65db1,#ff6f91,#ff9671,#ffc75f,#f9f871);
     */
-    background-size: 400%;
-    animation: bg-animation 16s infinite alternate;
+    background-size: 300%;
+    animation: bg-animation 32s infinite alternate;
     display: flex;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 @keyframes bg-animation {
     0% {
@@ -28,7 +29,8 @@ body {
     }
 }
 
-#main {
+
+#main, #landing {
     display: flex;
     height: 86.7vh;
     min-width: 80vw;
@@ -38,6 +40,44 @@ body {
     margin-right: auto;
     margin-top: 3vw;
     margin-left: 9vw;
+}
+
+#landing-main {
+    background-color: white;
+    height: 87vh;
+    width: 70%;
+    box-sizing: border-box;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 1.5rem;
+    backdrop-filter: blur(0.5rem);
+    display: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#landing ul {
+    width: 50%;
+    margin: 3rem;
+}
+
+#landing li {
+    margin-left: 1rem;
+}
+
+#landing button {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 600;
+    background: #05f293;
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 45%;
+    margin-top: 0.5rem;
+    margin-left: 30rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
 }
 
 #main-forms {
@@ -98,7 +138,31 @@ body {
     left: 8%;    
 }
 
-#main h1 {
+.circle3, .circle4, .circle5 {
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    height: 8rem;
+    width: 8rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle3{
+    top: 37%;
+    right: 17%;
+}
+
+.circle4{
+    bottom: 53%;
+    left: 34%;    
+}
+
+.circle5{
+    bottom: 10%;
+    right: 38%
+}
+
+h1 {
     color: #444;
     text-align: center;
 }
@@ -141,6 +205,7 @@ body {
     width: 100%;
     font-weight: 600;
     font-size: large;
+    cursor: pointer;
 }
 /*
 #book-list li{
@@ -205,17 +270,17 @@ form select, form input {
 form button {
     color: #fff;
     font-size: 2em;
-    background: blue;
+    background: #05f293;
     border: 0;
     padding: 0 10px;
-    border-radius: 50%;
+    border-radius: 25%;
     cursor: pointer;
     position: relative;
     bottom: 2px;
     margin-top: 0.5rem;
     margin-left: 6.3rem;
 }
-
+ 
 #add-author {
     height: 30%;
 }
@@ -274,20 +339,3 @@ form button {
     
 }
 
-#bolt g {
-    opacity: 0;
-    animation: dropIn 8s ease forwards infinite;
-    animation-delay: calc(var(--order) * 200ms);
-}
-
-@keyframes dropIn {
-    20% {
-        opacity: 0;
-        transform: translateY(-20);
-    }
-
-    30%, 100% {
-        opacity: 1;
-        transform: translateY(0)
-    }
-}

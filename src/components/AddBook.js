@@ -34,6 +34,11 @@ const AddBook =() =>{
             },
             refetchQueries: [getBooksQuery]
         });
+        setName('');
+        setGenre('');
+        setLanguage('');
+        setStatus('');
+        setAuthorId('');
     };
     
     return(
@@ -41,24 +46,36 @@ const AddBook =() =>{
             <h1>New Book</h1>
             <div className="field">
                 
-                <input type="text" placeholder="Book name" value={name} onChange={(e) => setName(e.target.value)} />
+                <input type="text" placeholder="Book Name" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
             <div className="field">
                 
-                <input type="text" placeholder="Genre" value={genre} onChange={(e) => setGenre(e.target.value)}  />
+                <select value={genre} label="Genre" onChange={(e) => setGenre(e.target.value)}>
+                    <option>Select Genre</option>
+                    <option value={"Fiction"}>Fiction</option>
+                    <option value={"Mystery"}>Mystery</option>
+                    <option value={"Thriller"}>Thriller</option>
+                    <option value={"Horror"}>Horror</option>
+                    <option value={"Fantasy"}>Fantasy</option>
+                    <option value={"Other"}>Other</option>
+                </select>
             </div>
             <div className="field">
                 
                 <input type="text" placeholder="Language" value={language} onChange={(e) => setLanguage(e.target.value)}  />
             </div>
             <div className="field">
-                
-                <input type="text" placeholder="Status" value={status} onChange={(e) => setStatus(e.target.value)}  />
+                <select value={status} label="Status" onChange={(e) => setStatus(e.target.value)}>
+                    <option>Select Status</option>
+                    <option value={"Sold"}>Sold</option>
+                    <option value={"Sell"}>Sell</option>
+                    <option value={"Not For Sale"}>Not For Sale</option>
+                </select>
             </div>
             <div className="field">
         
                 <select value={authorId} onChange={(e) => setAuthorId(e.target.value)} >
-                    <option>Select author</option>
+                    <option>Select Author</option>
                     { displayAuthors(loading, data) }
                 </select>
             </div>
