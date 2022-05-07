@@ -13,7 +13,7 @@ function Landing() {
         <div className="circle5"></div>
           <div id="landing">
             <div id="landing-main">
-              <h1>Library Project (Version-1)</h1>
+              <h1>Library Project</h1>
               <ul>
                 <h3>Tech-Stack</h3>
                   <li>React.js</li>
@@ -23,22 +23,15 @@ function Landing() {
                   <li>Node.js</li>
                   <li>MongoDB</li>
               </ul>
-              <ul>
-                <h3>Functionlity</h3>
-                  <li>Add author to library</li>
-                  <li>Add book to library</li>
-                  <li>Scroll-through books</li>
-                  <li>Get a book</li>
-              </ul>
-              <ul>
-                <h3>Version-2 functionality...</h3>
-                  <li>Dark mode</li>
-                  <li>Form validation</li>
-                  <li>Delete Book and Author</li>
-              </ul>
               <Link to='/home'>
                 <button>Demo</button>
               </Link>
+              <div id="landing-bottom">
+                <h4>portfolio project by Valentina (Val) Mekhonoshina. </h4> <br/>
+                <a href="https://github.com/geminicodes/library-frontend">github code here</a>
+                <a> and </a>
+                <a href="https://github.com/geminicodes/library-backend">here.</a>
+              </div>
             </div>
           </div>
         </div>

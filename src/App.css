@@ -55,9 +55,15 @@ body {
     margin-right: auto;
 }
 
+#landing h1 {
+    margin-top: 2rem;
+}
+
 #landing ul {
     width: 50%;
     margin: 3rem;
+    margin-top: 8rem;
+    padding-left: 4rem;
 }
 
 #landing li {
@@ -78,6 +84,11 @@ body {
     margin-top: 0.5rem;
     margin-left: 30rem;
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+}
+
+#landing-bottom {
+    margin-left: 7rem;
+    padding-top: 3rem;
 }
 
 #main-forms {
