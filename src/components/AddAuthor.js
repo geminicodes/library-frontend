@@ -28,6 +28,6 @@ const AddAuthor =() =>{
             <button>+</button>
         </form>
     )
-}
+};
 
 export default AddAuthor;

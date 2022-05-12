@@ -10,7 +10,7 @@ function BookList() {
 
 	if (loading) return <p>Loading....</p>;
 
-	if (error) return <p>Ops! Something went wrong</p>;
+	if (error) return <p>Oops! Something went wrong</p>;
 
 	return (
 		<div>
@@ -35,54 +35,3 @@ function BookList() {
 }
 
 export default BookList;
-
-/*
-import React,{ useState } from "react";
-import { useQuery } from "@apollo/client";
-//import { gql } from "apollo-boost";
-//import { graphql } from "react-apollo";
-import { getBooksQuery } from "../queries/queries";
-import BookDetails from "./BookDetails";
-
-function BookList() {
-  const {loading, error, data} = useQuery(getBooksQuery);
-  if (data) {
-  console.log("data: ", data);
-	}
-	if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error </p>;
-  const [selected, setSelected] = useState(null);
-  
-  return (
-      <div>
-        <ul id="book-list">
-          {data.books.map(book => (
-            <li key={bookId} onClick={() => {setSelected(book.id)}}>{book.name}</li>
-          ))}
-        </ul>
-        {selected ? <BookDetails bookId = {selected} /> : <p>no book selected</p> }
-      </div>
-  );
-}
-  
-    
-    
-  
-export default BookList;
-*/
-
-/*
-class BookList extends Component {
-    render() {
-        return (
-            <div>
-                <ul id="book-list">
-                    <li>Book name</li>
-                </ul>
-            </div>
-        )
-    }
-}
-
-export default graphql(getBooksQuery)(BookList);
-*/
