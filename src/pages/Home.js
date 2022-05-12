@@ -6,7 +6,7 @@ import AddBook from "../components/AddBook";
 import AddAuthor from "../components/AddAuthor";
 
 const client = new ApolloClient({
-    uri: "http://localhost:4000/graphql", cache: new InMemoryCache()
+    uri: "https://library-project-server.herokuapp.com/graphql", cache: new InMemoryCache()
 })
 
 class Home extends Component {
